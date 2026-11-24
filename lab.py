@@ -11,6 +11,7 @@ def main():
     parser.add_argument("prompt", type=str, help="El prompt.")
     parser.add_argument("--vegades", type=int, default=5)
     parser.add_argument("--temperature", type=float, default=1.0)
+    parser.add_argument("--seed", type=int, default=None)
 
     # Comprovar si no hi ha arguments
     if len(sys.argv) == 1:
@@ -23,9 +24,14 @@ def main():
         "temperature": args.temperature
     }
 
+    if args.seed is not None:
+        options["seed"] = args.seed
+
     print(f"Prompt: {args.prompt}")
     print(f"vegades: {args.vegades}")
     print(f"temperature: {args.temperature}")
+    if args.seed is not None:
+        print(f"seed: {args.seed}")
     print()
 
     for i in range(1, args.vegades + 1):

@@ -4,7 +4,7 @@
 
 **Predicció (abans de començar):** amb quina temperatura creieu que el model encertarà més una multiplicació? I amb quina proposarà noms més variats?
 
-**La vostra predicció:**
+**La vostra predicció:** Crec que la multiplicacií l'encertarà millor amb la temperatura 0, y amb la tempeatura 1.5 proposara més varietats.
 
 **Script:** aquest exercici no necessita cap paràmetre nou: feu servir `lab.py` tal com el teniu.
 
