@@ -26,21 +26,24 @@
 
 | Prompt | Temperatura 0 | Temperatura 1.5 |
 | :- | :- | :- |
-| A: 487 × 693 (quantes vegades ha encertat?) | | |
-| B: noms de cafeteria (hi ha varietat? són repetits?) | | |
+| A: 487 × 693 (quantes vegades ha encertat?) | 0 de 3. Sempre respon 337821. | 0 de 3. Respon 337851, 337821 i 337851. |
+| B: noms de cafeteria (hi ha varietat? són repetits?) |Poca varietat, molts noms es repeteixen.|Més varietat, encara que alguns noms es repeteixen. |
 
 ## Preguntes
 
 1. Amb quina temperatura funciona millor cada tasca? Per què?
 
-   **Resposta:**
+   **Resposta:** En la multiplicació, cap de les dues temperatures ha funcionat bé, perquè el model no ha encertat cap resposta. Amb temperatura 0 sempre dona el mateix resultat incorrecte, mentre que amb temperatura 1.5 varia una mica.
+
+   Per generar noms de cafeteries funciona millor la temperatura 1.5, perquè dona noms més variats i originals, com Logic Latte o Hex & Honey.
 
 2. Quina temperatura triaríeu per a un assistent de codi? I per un generador de noms de projectes o de startups tecnològiques?
-
-   **Resposta:**
-
 per a un generador d'idees per a un eslògan?
+
+   **Resposta:** Per a un assistent de codi triaria una temperatura baixa, perquè necessito respostes més consistents. Per generar noms de projectes, startups o eslògans, triaria una temperatura de més d'1, perquè es necessita més creativitat i varietat.
+
+
 3. Amb temperatura 0, el model ha donat sempre la mateixa resposta al prompt A? Era correcta? Que una resposta sigui consistent vol dir que sigui correcta? Com resoldríeu aquest problema en una aplicació real?
 
-   **Resposta:**
+   **Resposta:** Sí, les tres vegades ha donat el mateix resultat, 337821, però és incorrecte. Que una resposta sigui consistent no vol dir que sigui correcta. En una aplicació real faria servir una calculadora o una funció de Python per fer les operacions matemàtiques, en lloc de confiar en els càlculs del model.
 
