@@ -4,7 +4,7 @@
 
 **Predicció (abans de començar):** el primer codi que us doni el model funcionarà? Quants intents us caldran?
 
-**La vostra predicció:**
+**La vostra predicció:** Serà capaç de fer-me el codi, pero crec que no funcionarà a la primera. Necessitare dos o tres intents.
 
 1. **Configureu l'entorn de Python.** Aquest exercici i els següents fan servir Python. No cal crear cap carpeta nova: feu-ho dins del mateix repositori. Només cal fer-ho un cop, amb Visual Studio Code:
 
@@ -78,7 +78,38 @@
 
 ## El vostre prompt final
 
-_Enganxeu aquí el prompt que heu donat al model per generar `lab.py`._
+Crea un script de Python anomenat lab.py amb els requisits següents:
+
+- Utilitza argparse per llegir els arguments.
+- El prompt és un argument obligatori.
+- L'opció --vegades és un enter amb valor per defecte de 5.
+- L'opció --temperature és un decimal amb valor per defecte d'1.
+- Les opcions es poden escriure en qualsevol ordre.
+- Utilitza el model gemma3:4b.
+- Utilitza ollama.generate(model=..., prompt=..., options=...).
+- El paràmetre temperature ha d'anar dins del diccionari options.
+- Cada crida ha de ser independent, sense historial.
+- Extreu el text de la resposta amb `response["response"].strip().
+- Mostra primer el prompt i les opcions, i després les respostes numerades.
+- Si no es passa cap argument, mostra l'ajuda i surt sense error.
+- Importa sys i comprova si len(sys.argv) == 1 abans d'executar parser.parse_args(). Si no hi ha arguments, executa parser.print_help() i sys.exit(0).
+
+Exemple d'execució:
+
+python lab.py "Digues una paraula" --vegades 3 --temperature 0.8
+
+Exemple de sortida:
+
+Prompt: Digues una paraula  
+vegades: 3  
+temperature: 0.8
+
+1. Algorisme
+2. Microprocessador
+3. Recursivitat
+
+Respon només amb el codi complet, en un sol bloc i sense explicacions.
+
 
 Deseu l'script `lab.py` a l'arrel del repositori (no en aquesta carpeta).
 
@@ -86,9 +117,13 @@ Deseu l'script `lab.py` a l'arrel del repositori (no en aquesta carpeta).
 
 1. Quants intents us han calgut? Quins errors ha comès el model (nom del model, paràmetres, lectura dels arguments...) i com els heu resolt?
 
-   **Resposta:**
+   **Resposta:** 
+      He necessitat diversos intents perquè el codi funcionés correctament. Amb arguments funcionava bé, però sense arguments donava sempre el mateix error en lloc de mostrar l'ajuda.
+
+      Després de revisar el codi, he vist que el problema era que executava parser.parse_args() abans de comprovar si hi havia arguments. Li he indicat quin era el problema i com havia de canviar l'ordre de les instruccions. Però igualment, em seguia pasant el mateix codi amb errors. Però al final ho ha acabat coregint
+
 
 2. Heu llegit el codi abans d'executar-lo? Per què és important entendre el que s'executa a l'ordinador, encara que l'hagi escrit un model?
 
-   **Resposta:**
+   **Resposta:** Sí, he llegit el codi abans d'executar-lo. És important entendre què fa el codi perquè el model pot cometre errors, com ara. Y si entens el que hi ha pots saber que s'ha de corregir si no funciona.
 
